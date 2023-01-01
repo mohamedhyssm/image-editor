@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>image editor</title>
+  <link rel="stylesheet" href="CSS/main.css">
+</head>
+
+<body>
+  <header>
+    <h1>Edit your images</h1>
+    <p>Simply upload your photo and enjoy filters and more</p>
+  </header>
+  <div class="container">
+    <div class="image">
+      <div class="image-box">
+        <img id="img">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="upload">
+        <label for="upload">Upload</label>
+        <input type="file" id="upload">
+      </div>
+    </div>
+    <div class="filters">
+      <ul>
+        <li>
+          <label for="saturate">Saturate</label>
+          <input type="range" id="saturate" min="0" max="200" value="100">
+        </li>
+        <li>
+          <label for="contrast">Contrast</label>
+          <input type="range" id="contrast" min="0" max="200" value="100">
+        </li>
+        <li>
+          <label for="brightness">Brightness</label>
+          <input type="range" id="brightness" min="0" max="200" value="100">
+        </li>
+        <li>
+          <label for="sepia">Sepia</label>
+          <input type="range" id="sepia" min="0" max="200" value="0">
+        </li>
+        <li>
+          <label for="grayscale">Grayscale</label>
+          <input type="range" id="grayscale" min="0" max="100" value="0">
+        </li>
+        <li>
+          <label for="blur">Blur</label>
+          <input type="range" id="blur" step="0.1" min="0" max="1" value="0">
+        </li>
+        <li>
+          <label for="hue-rotate">Hue-rotate</label>
+          <input type="range" id="hue-rotate" min="0" max="350" value="0">
+        </li>
+        <li class="image-type">
+          <input id="png" type="radio" name="ex" checked>
+          <label for="png">png</label>
+          <input id="jpeg" type="radio" name="ex">
+          <label for="jpeg">jpg</label>
+        </li>
+      </ul>
+    </div>
+    <div class="reset">
+      <span id="reset">Rest</span>
+    </div>
+    <div class="download">
+      <a id="download" download="image">Download</a>
+    </div>
+  </div>
+  <script src="JS/main.js"></script>
+</body>
+
+</html>

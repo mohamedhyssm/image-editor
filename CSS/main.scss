@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+
+  p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+}
+
+.container {
+  // grid
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  gap: 10px;
+  // dimentions
+  min-width: 80vw;
+  max-width: 80vw;
+  min-height: calc(100vh -119px);
+  // colors
+  background-color: #222;
+  color: white;
+  // padding margin border
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+
+  .image {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+
+    img,
+    canvas {
+      max-width: 45vh;
+      max-height: 60vh;
+
+      @media (max-width: 767px) {
+        max-width: 80vw;
+      }
+    }
+
+    .upload {
+      input {
+        display: none;
+      }
+
+      label {
+        color: #fff;
+        padding: 8px 20px;
+        border: 2px #fff dashed;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.container {
+  .filters {
+
+    ul,
+    ul li {
+      // flex
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    ul {
+      label {
+        color: white;
+      }
+
+      li:last-child {
+        // flex
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        input {
+          appearance: none;
+
+          &:checked+label {
+            color: #5dccff;
+
+            &::after {
+              content: "";
+              position: absolute;
+              right: calc(100% + 14px);
+              top: 4px;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background-color: #5dccff;
+            }
+          }
+        }
+
+        label {
+          cursor: pointer;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            right: calc(100% + 10px);
+            width: 18px;
+            height: 18px;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    max-width: 90vw;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+.container {
+
+  .reset,
+  .download {
+    margin-top: 10px;
+    text-align: center;
+
+    a,
+    span {
+      // colors
+      color: white;
+      background-color: #526c78;
+      // border and padding
+      padding: 10px 20px;
+      border-radius: 6px;
+      // curser and transiton
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #415c67;
+      }
+    }
+  }
+
+}
